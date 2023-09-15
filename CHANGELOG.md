@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dwhiteGUK/version-test/compare/v1.0.0...v1.1.0) (2023-09-15)
+
+
+### Features
+
+* :speech_balloon: New text added ([4a32add](https://github.com/dwhiteGUK/version-test/commit/4a32adde888e5317745bb810b8f33396bf55d92b))
+
 # 1.0.0 (2023-09-15)
 
 
