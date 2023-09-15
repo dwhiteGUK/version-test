@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/dwhiteGUK/version-test/compare/v1.1.0...v1.1.1) (2023-09-15)
+
+
+### Bug Fixes
+
+* :bug: Clarify the text on the homepage ([3c8f53a](https://github.com/dwhiteGUK/version-test/commit/3c8f53adfa60ba766cf0397cba3ead1c2d64d96a))
+
 # [1.1.0](https://github.com/dwhiteGUK/version-test/compare/v1.0.0...v1.1.0) (2023-09-15)
 
 
