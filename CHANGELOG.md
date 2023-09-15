@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dwhiteGUK/version-test/compare/v1.1.1...v1.2.0) (2023-09-15)
+
+
+### Features
+
+* :sparkles: Missing .gitignore ([eac9a44](https://github.com/dwhiteGUK/version-test/commit/eac9a449dcabac19dd72361eabfc5bfbd8b0ab98))
+
 ## [1.1.1](https://github.com/dwhiteGUK/version-test/compare/v1.1.0...v1.1.1) (2023-09-15)
 
 
