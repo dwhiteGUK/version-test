@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/dwhiteGUK/version-test/compare/v1.6.0...v1.7.0) (2023-09-16)
+
+
+### Features
+
+* tweaking action ([58f51a0](https://github.com/dwhiteGUK/version-test/commit/58f51a05292071f8fedc622a8061afd3cc310844))
+
 # [1.6.0](https://github.com/dwhiteGUK/version-test/compare/v1.5.0...v1.6.0) (2023-09-16)
 
 
