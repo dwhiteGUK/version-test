@@ -35,10 +35,8 @@ jobs:
       - name: Set version
         id: package_version
         uses: KageKirin/set-node-package-version@v0
-        regex: '(\^|\~?)(\d|x|\*)+\.(\d|x|\*)+\.(\d|x|\*)+'
-        
         with:
-          version: ${{ steps.package-json.outputs.version }}
+          version: ${{ steps.previoustag.outputs.tag }}
 
       - name: Commit new version
         run: |
