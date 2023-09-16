@@ -34,11 +34,11 @@ jobs:
       - name: 'Get latest tag'
         uses: oprypin/find-latest-tag@v1
         with:
-          repository: octokit/rest.js  # The repository to scan.
+          repository: dwhiteGUK/version-test  # The repository to scan.
           releases-only: true  # We know that all relevant tags have a GitHub release for them.
-        id: octokit  # The step ID to refer to later.
+        id: latestTag  # The step ID to refer to later.
 
-      - run: echo "Octokit is at version ${{ steps.octokit.outputs.tag }}"
+      - run: echo "Version test is at version ${{ steps.latestTag.outputs.tag }}"
 
       - name: Set and Get values from the package.json
         id: packageJson
@@ -47,7 +47,7 @@ jobs:
           path: "package.json" # default value
           replaceWith: |
             {
-              "version": ${{ steps.octokit.outputs.tag }}
+              "version": ${{ steps.latestTag.outputs.tag }}
             }
 
       - run: echo "version - ${{ steps.packageJson.outputs.version }}"
