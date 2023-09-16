@@ -44,7 +44,7 @@ jobs:
         uses: maxgfr/github-change-json@main
         with:
           key: 'version'
-          value: '@maxgfr/example-${{ env.GITHUB_SHA }}'
+          value: ${{ steps.latestTag.outputs.tag }}
           path: package.json
           commit: true # it will commit the change
       # - name: Modify version of the package.json locally
