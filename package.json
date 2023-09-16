@@ -1,6 +1,6 @@
 {
   "name": "version-test",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.0",
   "description": "Testing automated releases",
   "main": "index.html",
   "prepare": "husky install",
