@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/dwhiteGUK/version-test/compare/v1.4.0...v1.5.0) (2023-09-16)
+
+
+### Features
+
+* get and set version ([54ba1db](https://github.com/dwhiteGUK/version-test/commit/54ba1dbb0955e06c46578463c43ae3402dd2a9aa))
+
 # [1.4.0](https://github.com/dwhiteGUK/version-test/compare/v1.3.0...v1.4.0) (2023-09-16)
 
 
