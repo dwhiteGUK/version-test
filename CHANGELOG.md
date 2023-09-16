@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/dwhiteGUK/version-test/compare/v1.7.0...v1.8.0) (2023-09-16)
+
+
+### Features
+
+* try different action ([4d91757](https://github.com/dwhiteGUK/version-test/commit/4d917574f07048b97870a94970cd0aab91ed0973))
+
 # [1.7.0](https://github.com/dwhiteGUK/version-test/compare/v1.6.0...v1.7.0) (2023-09-16)
 
 
