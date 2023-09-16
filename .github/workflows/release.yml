@@ -35,6 +35,8 @@ jobs:
       - name: Set version
         id: package_version
         uses: KageKirin/set-node-package-version@v0
+        inputs:
+          regex: (\^|\~?)(\d|x|\*)+\.(\d|x|\*)+\.(\d|x|\*)+
         with:
           version: ${{ steps.previoustag.outputs.tag }}
 
