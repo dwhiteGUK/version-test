@@ -32,17 +32,29 @@ jobs:
         with:
           fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
 
-      - name: Set version
-        id: package_version
-        uses: KageKirin/set-node-package-version@v0
+      - name: Set and Get values from the package.json
+        id: packageJson
+        uses: RadovanPelka/github-action-json@main
         with:
-          version: ${{ steps.previoustag.outputs.tag }}
-          regex: (\^|\~?)(\d|x|\*)+\.(\d|x|\*)+\.(\d|x|\*)+
+          path: "package.json" # default value
+          replaceWith: |
+            {
+              "version": ${{ steps.previoustag.outputs.tag }}
+            }
 
-      - name: Commit new version
-        run: |
-          git commit -am "CI: update version from tag"
-          git push https://${{ github.token }}@github.com/OWNER/REPO
+      - run: echo "version - ${{ steps.packageJson.outputs.version }}"
+
+      # - name: Set version
+      #   id: package_version
+      #   uses: KageKirin/set-node-package-version@v0
+      #   with:
+      #     version: ${{ steps.previoustag.outputs.tag }}
+      #     regex: (\^|\~?)(\d|x|\*)+\.(\d|x|\*)+\.(\d|x|\*)+
+
+      # - name: Commit new version
+      #   run: |
+      #     git commit -am "CI: update version from tag"
+      #     git push https://${{ github.token }}@github.com/OWNER/REPO
 
       # - name: 'Update version'
       #   id: package-json
