@@ -1,3 +1,11 @@
+## [1.8.1](https://github.com/dwhiteGUK/version-test/compare/v1.8.0...v1.8.1) (2023-09-16)
+
+
+### Bug Fixes
+
+* update package.json with version=@maxgfr/example- ([bb186ce](https://github.com/dwhiteGUK/version-test/commit/bb186ce6b5af6fd98038126f1fdde3f46066e672))
+* Use tag value ([b954ecf](https://github.com/dwhiteGUK/version-test/commit/b954ecf231b2e04a8909efc8099376d1d0fb28ea))
+
 # [1.8.0](https://github.com/dwhiteGUK/version-test/compare/v1.7.0...v1.8.0) (2023-09-16)
 
 
