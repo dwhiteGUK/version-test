@@ -23,14 +23,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: npx semantic-release
-      # - name: Get Tags
-      #   run: git fetch origin +refs/tags/*:refs/tags/*
-      # echo the tag number out
-      # - name: 'Get Previous tag'
-      #   id: previoustag
-      #   uses: 'WyriHaximus/github-action-get-previous-tag@v1'
-      #   with:
-      #     fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
       - name: 'Get latest tag'
         uses: oprypin/find-latest-tag@v1
         with:
@@ -47,23 +39,5 @@ jobs:
           value: ${{ steps.latestTag.outputs.tag }}
           path: package.json
           commit: true # it will commit the change
-      # - name: Modify version of the package.json locally
-      #   uses: maxgfr/github-change-json@main
-      #   with:
-      #     key: 'version'
-      #     value: ${{ steps.latestTag.outputs.tag }}
-      #     path: ./package.json
-
-      # - name: Set and Get values from the package.json
-      #   id: packageJson
-      #   uses: RadovanPelka/github-action-json@main
-      #   with:
-      #     path: "package.json" # default value
-      #     replaceWith: |
-      #       {
-      #         "version": ${{ steps.latestTag.outputs.tag }}
-      #       }
-
-      # - run: echo "version - ${{ steps.packageJson.outputs.version }}"
 
       
