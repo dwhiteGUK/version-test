@@ -32,15 +32,26 @@ jobs:
         with:
           fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
 
-      - name: 'Update version'
-        id: package-json
-        uses: actions/checkout@v2
-        uses: johnnybenson/package-json-versioned-action@v1.0.5
-          with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo "has-updated -- ${{ steps.package-json.outputs.has-updated }}"
-      - run: echo "previous-version -- ${{ steps.package-json.outputs.previous-version }}"
-      - run: echo "version -- ${{ steps.package-json.outputs.version }}"          
+      - name: Set version
+        id: package_version
+        uses: KageKirin/set-node-package-version@v0
+        with:
+          version: ${{ steps.package-json.outputs.version }}
+
+      - name: Commit new version
+        run: |
+          git commit -am "CI: update version from tag"
+          git push https://${{ github.token }}@github.com/OWNER/REPO
+
+      # - name: 'Update version'
+      #   id: package-json
+      #   uses: actions/checkout@v2
+      #   uses: johnnybenson/package-json-versioned-action@v1.0.5
+      #     with:
+      #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - run: echo "has-updated -- ${{ steps.package-json.outputs.has-updated }}"
+      # - run: echo "previous-version -- ${{ steps.package-json.outputs.previous-version }}"
+      # - run: echo "version -- ${{ steps.package-json.outputs.version }}"          
       # - name: 'Output previous tag'
       #   run: |
       #     echo: ${{ steps.previoustag.outputs.tag }}
