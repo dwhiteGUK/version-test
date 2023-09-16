@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/dwhiteGUK/version-test/compare/v1.2.0...v1.3.0) (2023-09-16)
+
+
+### Features
+
+* :speech_balloon: remove text ([37208c3](https://github.com/dwhiteGUK/version-test/commit/37208c3190b9e4604bae66b44b3bbdca9f4cc2c3))
+
 # [1.2.0](https://github.com/dwhiteGUK/version-test/compare/v1.1.1...v1.2.0) (2023-09-15)
 
 
