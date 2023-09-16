@@ -1,6 +1,6 @@
 {
   "name": "version-test",
-  "version": "v1.8.2",
+  "version": "v1.8.3",
   "description": "Testing automated releases",
   "main": "index.html",
   "prepare": "husky install",
