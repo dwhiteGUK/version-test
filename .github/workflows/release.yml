@@ -40,16 +40,30 @@ jobs:
 
       - run: echo "Version test is at version ${{ steps.latestTag.outputs.tag }}"
 
-      - name: Set and Get values from the package.json
-        id: packageJson
-        uses: RadovanPelka/github-action-json@main
+      - name: Modify version in the package.json
+        uses: maxgfr/github-change-json@main
         with:
-          path: "package.json" # default value
-          replaceWith: |
-            {
-              "version": ${{ steps.latestTag.outputs.tag }}
-            }
+          key: 'version'
+          value: '@maxgfr/example-${{ env.GITHUB_SHA }}'
+          path: package.json
+          commit: true # it will commit the change
+      # - name: Modify version of the package.json locally
+      #   uses: maxgfr/github-change-json@main
+      #   with:
+      #     key: 'version'
+      #     value: ${{ steps.latestTag.outputs.tag }}
+      #     path: ./package.json
 
-      - run: echo "version - ${{ steps.packageJson.outputs.version }}"
+      # - name: Set and Get values from the package.json
+      #   id: packageJson
+      #   uses: RadovanPelka/github-action-json@main
+      #   with:
+      #     path: "package.json" # default value
+      #     replaceWith: |
+      #       {
+      #         "version": ${{ steps.latestTag.outputs.tag }}
+      #       }
+
+      # - run: echo "version - ${{ steps.packageJson.outputs.version }}"
 
       
