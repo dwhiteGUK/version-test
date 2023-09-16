@@ -8,6 +8,19 @@
 * :building_construction: update version number ([d8839c9](https://github.com/dwhiteGUK/version-test/commit/d8839c906882dedf3f220aefcc0fc2f7dacda63a))
 * :construction: update version ([25c3cb1](https://github.com/dwhiteGUK/version-test/commit/25c3cb13d4a6ea63613e2d2206225381de5ea034))
 * :speech_balloon: Remove text to trigger deploy ([153c6b2](https://github.com/dwhiteGUK/version-test/commit/153c6b211b07ca2960cfe54dd9c7a1aa959f0fbe))
+* fix syntax for regex ([07160aa](https://github.com/dwhiteGUK/version-test/commit/07160aaeee992ab48e6f803f6b485f08c1246294))
+* try with regex ([bee08f0](https://github.com/dwhiteGUK/version-test/commit/bee08f0e5d4f7bc9b12d166040143a6597fff1e4))
+
+# [1.4.0](https://github.com/dwhiteGUK/version-test/compare/v1.3.0...v1.4.0) (2023-09-16)
+
+
+### Features
+
+* :building_construction: remove regex, try different version number ([1d6945e](https://github.com/dwhiteGUK/version-test/commit/1d6945e8718b775d3a1a8b4d845d51698c250c2f))
+* :building_construction: Try with regex ([7b08bfa](https://github.com/dwhiteGUK/version-test/commit/7b08bfa5e42b84736a87a46edf1c2e1bec607a55))
+* :building_construction: update version number ([d8839c9](https://github.com/dwhiteGUK/version-test/commit/d8839c906882dedf3f220aefcc0fc2f7dacda63a))
+* :construction: update version ([25c3cb1](https://github.com/dwhiteGUK/version-test/commit/25c3cb13d4a6ea63613e2d2206225381de5ea034))
+* :speech_balloon: Remove text to trigger deploy ([153c6b2](https://github.com/dwhiteGUK/version-test/commit/153c6b211b07ca2960cfe54dd9c7a1aa959f0fbe))
 
 # [1.4.0](https://github.com/dwhiteGUK/version-test/compare/v1.3.0...v1.4.0) (2023-09-16)
 
