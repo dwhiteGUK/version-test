@@ -26,11 +26,19 @@ jobs:
       # - name: Get Tags
       #   run: git fetch origin +refs/tags/*:refs/tags/*
       # echo the tag number out
-      - name: 'Get Previous tag'
-        id: previoustag
-        uses: 'WyriHaximus/github-action-get-previous-tag@v1'
+      # - name: 'Get Previous tag'
+      #   id: previoustag
+      #   uses: 'WyriHaximus/github-action-get-previous-tag@v1'
+      #   with:
+      #     fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
+      - name: 'Get latest tag'
+        uses: oprypin/find-latest-tag@v1
         with:
-          fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
+          repository: octokit/rest.js  # The repository to scan.
+          releases-only: true  # We know that all relevant tags have a GitHub release for them.
+        id: octokit  # The step ID to refer to later.
+
+      - run: echo "Octokit is at version ${{ steps.octokit.outputs.tag }}"
 
       - name: Set and Get values from the package.json
         id: packageJson
@@ -39,53 +47,9 @@ jobs:
           path: "package.json" # default value
           replaceWith: |
             {
-              "version": ${{ steps.previoustag.outputs.tag }}
+              "version": ${{ steps.octokit.outputs.tag }}
             }
 
       - run: echo "version - ${{ steps.packageJson.outputs.version }}"
-
-      # - name: Set version
-      #   id: package_version
-      #   uses: KageKirin/set-node-package-version@v0
-      #   with:
-      #     version: ${{ steps.previoustag.outputs.tag }}
-      #     regex: (\^|\~?)(\d|x|\*)+\.(\d|x|\*)+\.(\d|x|\*)+
-
-      # - name: Commit new version
-      #   run: |
-      #     git commit -am "CI: update version from tag"
-      #     git push https://${{ github.token }}@github.com/OWNER/REPO
-
-      # - name: 'Update version'
-      #   id: package-json
-      #   uses: actions/checkout@v2
-      #   uses: johnnybenson/package-json-versioned-action@v1.0.5
-      #     with:
-      #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # - run: echo "has-updated -- ${{ steps.package-json.outputs.has-updated }}"
-      # - run: echo "previous-version -- ${{ steps.package-json.outputs.previous-version }}"
-      # - run: echo "version -- ${{ steps.package-json.outputs.version }}"          
-      # - name: 'Output previous tag'
-      #   run: |
-      #     echo: ${{ steps.previoustag.outputs.tag }}
-      # - name: 'package.json info'
-      #   id: info
-      #   uses: jaywcjlove/github-action-package@main
-
-      # - run: echo "name - ${{ steps.info.outputs.name }}"
-      # - run: echo "version - ${{ steps.info.outputs.version }}"
-      # - run: echo "description - ${{ steps.info.outputs.description }}"
-      # - run: echo "author - ${{ steps.info.outputs.author }}"
-
-      # - name: 'update version with previous tag'
-      #   id: info
-      #   uses: jaywcjlove/github-action-package@main
-      #   with:
-      #     rename: '@jaywcjlove/github-action-package-test'
-
-      # - run: echo "name - ${{ steps.info.outputs.name }}"
-      # - run: echo "version - ${{ steps.previoustag.outputs.tag }}"
-      # - run: echo "description - ${{ steps.info.outputs.description }}"
-      # - run: echo "author - ${{ steps.info.outputs.author }}"
 
       
