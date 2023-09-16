@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/dwhiteGUK/version-test/compare/v1.8.1...v1.8.2) (2023-09-16)
+
+
+### Bug Fixes
+
+* update package.json with version=v1.8.1 ([9d011fe](https://github.com/dwhiteGUK/version-test/commit/9d011fe6366af62deea215e3191b0d6b2e8855c2))
+
 ## [1.8.1](https://github.com/dwhiteGUK/version-test/compare/v1.8.0...v1.8.1) (2023-09-16)
 
 
