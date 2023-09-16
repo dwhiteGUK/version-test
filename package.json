@@ -1,6 +1,6 @@
 {
   "name": "version-test",
-  "version": "@maxgfr/example-",
+  "version": "v1.8.1",
   "description": "Testing automated releases",
   "main": "index.html",
   "prepare": "husky install",
