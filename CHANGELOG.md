@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/dwhiteGUK/version-test/compare/v1.5.0...v1.6.0) (2023-09-16)
+
+
+### Features
+
+* try different GitHub action to get tag ([4961d2c](https://github.com/dwhiteGUK/version-test/commit/4961d2c645a44ae7852666127d975ee02f797b02))
+
 # [1.5.0](https://github.com/dwhiteGUK/version-test/compare/v1.4.0...v1.5.0) (2023-09-16)
 
 
