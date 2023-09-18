@@ -1,3 +1,15 @@
+# [1.9.0](https://github.com/dwhiteGUK/version-test/compare/v1.8.3...v1.9.0) (2023-09-18)
+
+
+### Bug Fixes
+
+* update package.json with version=v1.8.3 ([707ef2a](https://github.com/dwhiteGUK/version-test/commit/707ef2aca0ae05123dfccab6882ae011389b5759))
+
+
+### Features
+
+* :speech_balloon: Added some exciting text ([ef40be6](https://github.com/dwhiteGUK/version-test/commit/ef40be62964094d5150f2341385d4e400d37fb05))
+
 ## [1.8.3](https://github.com/dwhiteGUK/version-test/compare/v1.8.2...v1.8.3) (2023-09-16)
 
 
