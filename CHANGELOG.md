@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/dwhiteGUK/version-test/compare/v1.9.0...v1.10.0) (2023-09-29)
+
+
+### Bug Fixes
+
+* update package.json with version=v1.9.0 ([64f1af4](https://github.com/dwhiteGUK/version-test/commit/64f1af472181abc61ef464dfafc4c8f038f81e23))
+
+
+### Features
+
+* :speech_balloon: add more text ([dd19322](https://github.com/dwhiteGUK/version-test/commit/dd193220c315d30b362aa1d7dc30d21953a2fb20))
+
 # [1.9.0](https://github.com/dwhiteGUK/version-test/compare/v1.8.3...v1.9.0) (2023-09-18)
 
 
