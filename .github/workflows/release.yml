@@ -2,12 +2,13 @@ name: Release
 
 on:
   push:
-    branches: [main]
+    branches: [main, beta]
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -21,23 +22,5 @@ jobs:
         run: npm install --save-dev @semantic-release/changelog @semantic-release/git
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
-      - name: 'Get latest tag'
-        uses: oprypin/find-latest-tag@v1
-        with:
-          repository: dwhiteGUK/version-test  # The repository to scan.
-          releases-only: true  # We know that all relevant tags have a GitHub release for them.
-        id: latestTag  # The step ID to refer to later.
-
-      - run: echo "Version test is at version ${{ steps.latestTag.outputs.tag }}"
-
-      - name: Modify version in the package.json
-        uses: maxgfr/github-change-json@main
-        with:
-          key: 'version'
-          value: ${{ steps.latestTag.outputs.tag }}
-          path: package.json
-          commit: true # it will commit the change
-
-      
